@@ -1,0 +1,143 @@
+E:\Programing\HoaDon 2.0\bin\Release\HoaDon.exe.config
+E:\Programing\HoaDon 2.0\bin\Release\HoaDon.exe
+E:\Programing\HoaDon 2.0\bin\Release\HoaDon.pdb
+E:\Programing\HoaDon 2.0\bin\Release\EntityFramework.dll
+E:\Programing\HoaDon 2.0\bin\Release\EntityFramework.SqlServer.dll
+E:\Programing\HoaDon 2.0\bin\Release\LiveCharts.dll
+E:\Programing\HoaDon 2.0\bin\Release\LiveCharts.Wpf.dll
+E:\Programing\HoaDon 2.0\bin\Release\MaterialDesignColors.dll
+E:\Programing\HoaDon 2.0\bin\Release\MaterialDesignThemes.Wpf.dll
+E:\Programing\HoaDon 2.0\bin\Release\Newtonsoft.Json.dll
+E:\Programing\HoaDon 2.0\bin\Release\System.Data.SQLite.dll
+E:\Programing\HoaDon 2.0\bin\Release\System.Data.SQLite.EF6.dll
+E:\Programing\HoaDon 2.0\bin\Release\System.Data.SQLite.Linq.dll
+E:\Programing\HoaDon 2.0\bin\Release\EntityFramework.xml
+E:\Programing\HoaDon 2.0\bin\Release\EntityFramework.SqlServer.xml
+E:\Programing\HoaDon 2.0\bin\Release\LiveCharts.pdb
+E:\Programing\HoaDon 2.0\bin\Release\LiveCharts.xml
+E:\Programing\HoaDon 2.0\bin\Release\LiveCharts.Wpf.pdb
+E:\Programing\HoaDon 2.0\bin\Release\LiveCharts.Wpf.xml
+E:\Programing\HoaDon 2.0\bin\Release\MaterialDesignColors.pdb
+E:\Programing\HoaDon 2.0\bin\Release\MaterialDesignThemes.Wpf.pdb
+E:\Programing\HoaDon 2.0\bin\Release\MaterialDesignThemes.Wpf.xml
+E:\Programing\HoaDon 2.0\bin\Release\Newtonsoft.Json.xml
+E:\Programing\HoaDon 2.0\bin\Release\System.Data.SQLite.xml
+E:\Programing\HoaDon 2.0\obj\Release\HoaDon.csproj.AssemblyReference.cache
+E:\Programing\HoaDon 2.0\obj\Release\wdChinh.baml
+E:\Programing\HoaDon 2.0\obj\Release\pgCaiDat.baml
+E:\Programing\HoaDon 2.0\obj\Release\pgKhoHang.baml
+E:\Programing\HoaDon 2.0\obj\Release\wdChaoMung.baml
+E:\Programing\HoaDon 2.0\obj\Release\wdInHoaDon.baml
+E:\Programing\HoaDon 2.0\obj\Release\wdMaXacNhan.baml
+E:\Programing\HoaDon 2.0\obj\Release\App.baml
+E:\Programing\HoaDon 2.0\obj\Release\wdChinh.g.cs
+E:\Programing\HoaDon 2.0\obj\Release\pgCaiDat.g.cs
+E:\Programing\HoaDon 2.0\obj\Release\pgHoaDon.g.cs
+E:\Programing\HoaDon 2.0\obj\Release\pgKhoHang.g.cs
+E:\Programing\HoaDon 2.0\obj\Release\pgThongKe.g.cs
+E:\Programing\HoaDon 2.0\obj\Release\pgTrangChu.g.cs
+E:\Programing\HoaDon 2.0\obj\Release\wdChaoMung.g.cs
+E:\Programing\HoaDon 2.0\obj\Release\wdInHoaDon.g.cs
+E:\Programing\HoaDon 2.0\obj\Release\wdMaXacNhan.g.cs
+E:\Programing\HoaDon 2.0\obj\Release\App.g.cs
+E:\Programing\HoaDon 2.0\obj\Release\GeneratedInternalTypeHelper.g.cs
+E:\Programing\HoaDon 2.0\obj\Release\HoaDon_MarkupCompile.cache
+E:\Programing\HoaDon 2.0\obj\Release\HoaDon_MarkupCompile.lref
+E:\Programing\HoaDon 2.0\obj\Release\pgHoaDon.baml
+E:\Programing\HoaDon 2.0\obj\Release\pgThongKe.baml
+E:\Programing\HoaDon 2.0\obj\Release\pgTrangChu.baml
+E:\Programing\HoaDon 2.0\obj\Release\HoaDon.g.resources
+E:\Programing\HoaDon 2.0\obj\Release\HoaDon.Properties.Resources.resources
+E:\Programing\HoaDon 2.0\obj\Release\HoaDon.csproj.GenerateResource.cache
+E:\Programing\HoaDon 2.0\obj\Release\HoaDon.csproj.CoreCompileInputs.cache
+E:\Programing\HoaDon 2.0\obj\Release\HoaDon.exe
+E:\Programing\HoaDon 2.0\obj\Release\HoaDon.pdb
+E:\Programing\HoaDon 2.0\obj\Release\HoaDon.csproj.CopyComplete
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\HoaDon.csproj.AssemblyReference.cache
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\wdChinh.baml
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\pgCaiDat.baml
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\pgKhoHang.baml
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\wdChaoMung.baml
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\wdInHoaDon.baml
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\wdMaXacNhan.baml
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\App.baml
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\pgDuLieuCu.g.cs
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\wdChinh.g.cs
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\pgCaiDat.g.cs
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\pgHoaDon.g.cs
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\pgKhoHang.g.cs
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\pgThongKe.g.cs
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\pgTrangChu.g.cs
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\wdChaoMung.g.cs
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\wdInHoaDon.g.cs
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\wdMaXacNhan.g.cs
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\App.g.cs
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\GeneratedInternalTypeHelper.g.cs
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\HoaDon_MarkupCompile.cache
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\HoaDon_MarkupCompile.lref
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\HoaDon.exe
+E:\Programing\HoaDon 2.0 - Copy\obj\Release\HoaDon.pdb
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\HoaDon.exe.config
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\HoaDon.exe
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\HoaDon.pdb
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\EntityFramework.dll
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\EntityFramework.SqlServer.dll
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\LiveCharts.dll
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\LiveCharts.Wpf.dll
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\MaterialDesignColors.dll
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\MaterialDesignThemes.Wpf.dll
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\Newtonsoft.Json.dll
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\System.Data.SQLite.dll
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\System.Data.SQLite.EF6.dll
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\System.Data.SQLite.Linq.dll
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\EntityFramework.xml
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\EntityFramework.SqlServer.xml
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\LiveCharts.pdb
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\LiveCharts.xml
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\LiveCharts.Wpf.pdb
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\LiveCharts.Wpf.xml
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\MaterialDesignColors.pdb
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\MaterialDesignThemes.Wpf.pdb
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\MaterialDesignThemes.Wpf.xml
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\Newtonsoft.Json.xml
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\System.Data.SQLite.xml
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\HoaDon.csproj.AssemblyReference.cache
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\wdChinh.baml
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\pgCaiDat.baml
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\pgKhoHang.baml
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\wdChaoMung.baml
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\wdInHoaDon.baml
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\wdMaXacNhan.baml
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\App.baml
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\pgDuLieuCu.g.cs
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\wdChinh.g.cs
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\pgCaiDat.g.cs
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\pgHoaDon.g.cs
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\pgKhoHang.g.cs
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\pgThongKe.g.cs
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\pgTrangChu.g.cs
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\wdChaoMung.g.cs
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\wdInHoaDon.g.cs
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\wdMaXacNhan.g.cs
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\App.g.cs
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\GeneratedInternalTypeHelper.g.cs
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\HoaDon_MarkupCompile.cache
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\HoaDon_MarkupCompile.lref
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\pgDuLieuCu.baml
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\pgHoaDon.baml
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\pgThongKe.baml
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\pgTrangChu.baml
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\HoaDon.g.resources
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\HoaDon.Properties.Resources.resources
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\HoaDon.csproj.GenerateResource.cache
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\HoaDon.csproj.CoreCompileInputs.cache
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\HoaDon.exe
+E:\Programing\HoaDon 2.0(DuLieuCu)\obj\Release\HoaDon.pdb
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\ClosedXML.dll
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\DocumentFormat.OpenXml.dll
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\ExcelNumberFormat.dll
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\System.IO.Packaging.dll
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\ClosedXML.pdb
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\ClosedXML.xml
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\DocumentFormat.OpenXml.xml
+E:\Programing\HoaDon 2.0(DuLieuCu)\bin\Release\ExcelNumberFormat.xml

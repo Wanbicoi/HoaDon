@@ -1,0 +1,321 @@
+﻿<Window x:Class="HoaDon.wdInHoaDon"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"		
+		FontSize="12"
+		MouseLeftButtonDown="Window_MouseDown"
+		AllowsTransparency="True"
+		Background="Transparent"
+		WindowStartupLocation="CenterScreen" 
+		WindowStyle="None" 
+		Title="In hóa đơn"
+		MinHeight="600" Width="620">
+	<Grid>
+		<Border Background="White"
+		CornerRadius="10"
+		BorderThickness="0 0 2 2">
+			<Border.Effect>
+				<DropShadowEffect ShadowDepth="2"/>
+			</Border.Effect>
+		</Border>
+		<ScrollViewer  x:Name="scr"
+			Margin="10 100 10 10">
+			<Border BorderBrush="Black"
+					HorizontalAlignment="Center"
+					BorderThickness="1"
+					CornerRadius="5">
+				<Border x:Name="root"
+						Padding="20"
+				VerticalAlignment="Stretch">
+					<Border.Resources>
+						<Style TargetType="TextBlock">
+							<Setter Property="TextWrapping" Value="Wrap"/>
+						</Style>
+						<Style TargetType="Label">
+							<Setter Property="Padding" Value="2"/>
+							<Setter Property="SnapsToDevicePixels" Value="True"/>
+							<Setter Property="BorderBrush" Value="Black"/>
+							<Setter Property="BorderThickness" Value="0.5"/>
+							<Setter Property="HorizontalAlignment" Value="Stretch"/>
+							<Setter Property="VerticalAlignment" Value="Stretch"/>
+							<Setter Property="VerticalContentAlignment" Value="Center"/>
+							<Setter Property="HorizontalContentAlignment" Value="Center"/>
+						</Style>
+					</Border.Resources>
+					<DockPanel>
+						<StackPanel DockPanel.Dock="Bottom">
+							<WrapPanel HorizontalAlignment="Stretch">
+								<StackPanel>
+									<StackPanel x:Name="stBangThongSoThiLuc" Margin="0 0 10 10">
+										<TextBlock Margin="5 10 0 3">Bảng thông số thị lực</TextBlock>
+										<Grid>
+											<Grid.Resources>
+												<Style TargetType="Label">
+													<Setter Property="Padding" Value="2 3"/>
+													<Setter Property="VerticalContentAlignment" Value="Center"/>
+													<Setter Property="HorizontalContentAlignment" Value="Center"/>
+													<Setter Property="BorderThickness" Value="1 1 0 0"/>
+													<Setter Property="BorderBrush" Value="Black"/>
+												</Style>
+											</Grid.Resources>
+											<Grid.ColumnDefinitions>
+												<ColumnDefinition/>
+												<ColumnDefinition/>
+												<ColumnDefinition/>
+												<ColumnDefinition/>
+												<ColumnDefinition/>
+												<ColumnDefinition/>
+											</Grid.ColumnDefinitions>
+											<Grid.RowDefinitions>
+												<RowDefinition/>
+												<RowDefinition/>
+												<RowDefinition/>
+											</Grid.RowDefinitions>
+											<Label Grid.Row="0" Grid.Column="5"
+											   BorderThickness="1 1 1 0">
+												<TextBlock>KCĐT<LineBreak/>(PD)
+												</TextBlock>
+											</Label>
+											<Label Grid.Row="0" Grid.Column="0">
+												<TextBlock>Mắt<LineBreak/>(Eye)
+												</TextBlock>
+											</Label>
+											<Label Grid.Row="0" Grid.Column="1">
+												<TextBlock>Mắt<LineBreak/>(SHP)
+												</TextBlock>
+											</Label>
+											<Label Grid.Row="0" Grid.Column="2">
+												<TextBlock>  Trụ<LineBreak/>(CYL)
+												</TextBlock>
+											</Label>
+											<Label Grid.Row="0" Grid.Column="3">
+												<TextBlock>Trục<LineBreak/>(AX)
+												</TextBlock>
+											</Label>
+											<Label Grid.Row="0" Grid.Column="4">
+												<TextBlock>Cộng<LineBreak/>(ADD)
+												</TextBlock>
+											</Label>
+											<Label Grid.Row="1" Grid.Column="0">Phải(R)
+											</Label>
+											<Label Grid.Row="2" Grid.Column="0"
+											   BorderThickness="1 1 0 1">Trái(L)
+											</Label>
+											<Label Grid.Row="1" Grid.Column="1" 
+											   Content="{Binding ThiLuc[0]}"/>
+											<Label Grid.Row="1" Grid.Column="2"
+											   Content="{Binding ThiLuc[1]}"/>
+											<Label Grid.Row="1" Grid.Column="3" 
+											   Content="{Binding ThiLuc[2]}"/>
+											<Label Grid.Row="1" Grid.Column="4" 
+											   Content="{Binding ThiLuc[3]}"/>
+											<Label Grid.Row="2" Grid.Column="1" 
+											   BorderThickness="1 1 0 1"
+											   Content="{Binding ThiLuc[4]}"/>
+											<Label Grid.Row="2" Grid.Column="2" 
+											   BorderThickness="1 1 0 1"
+											   Content="{Binding ThiLuc[5]}"/>
+											<Label Grid.Row="2" Grid.Column="3"
+											   BorderThickness="1 1 0 1"
+											   Content="{Binding ThiLuc[6]}"/>
+											<Label Grid.Row="2" Grid.Column="4"
+											   BorderThickness="1 1 0 1" 
+											   Content="{Binding ThiLuc[7]}"/>
+											<Label BorderThickness="1" Grid.RowSpan="2" Grid.Row="1" Grid.Column="5"
+										 Content="{Binding ThiLuc[8]}"/>
+										</Grid>
+									</StackPanel>
+									<TextBlock Width="290"/>
+								</StackPanel>
+								<TextBlock Margin="60 0 0 0" HorizontalAlignment="Right"
+									   Name="txbNgay" xml:space="preserve"/>
+							</WrapPanel>
+							<GroupBox Header="*Lưu ý">
+								<GroupBox.Resources>
+									<Style TargetType="GroupBox"/>
+								</GroupBox.Resources>
+								<TextBlock Text="{Binding LuuY}" FontSize="8"
+										   FontStyle="Italic"/>
+							</GroupBox>
+							<TextBlock HorizontalAlignment="Center" 
+								   FontWeight="Bold">
+							______________________________
+							</TextBlock>
+							<TextBlock HorizontalAlignment="Center" 
+								   Foreground="Red"
+								   FontWeight="Bold">
+							Xin cảm ơn và hẹn gặp lại quý khách
+							<Italic>!</Italic>
+							</TextBlock>
+						</StackPanel>
+						<StackPanel>
+							<Grid Margin="0 0 0 10">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="Auto"/>
+									<ColumnDefinition/>
+								</Grid.ColumnDefinitions>
+								<Image Name="imgLogo" Margin="20 0 0 0"
+									   Source="{Binding Logo}"
+									   MaxWidth="150"
+									   MaxHeight="100"
+								   Height="100"/>
+								<StackPanel HorizontalAlignment="Center"
+											Grid.Column="1">
+									<TextBlock HorizontalAlignment="Center"
+										   FontWeight="Bold"
+										   Text="{Binding TenCuaHang}" xml:space="preserve"
+										   Name="txbHeader1" Foreground="Red"></TextBlock>
+									<TextBlock HorizontalAlignment="Center" FontSize="10"  Text="{Binding SDTCuaHang}" xml:space="preserve"></TextBlock>
+									<TextBlock HorizontalAlignment="Center" FontSize="10" Text="{Binding DiaChiCuaHang}" xml:space="preserve"></TextBlock>
+									<TextBlock HorizontalAlignment="Center">_________________________***_________________________</TextBlock>
+								</StackPanel>
+							</Grid>
+							<TextBlock Margin="0 0 0 20" 
+								   Text="{Binding TenHoaDon}"
+								   Name="txbHeader2"
+								   FontWeight="Bold"
+								   HorizontalAlignment="Center"
+								   Foreground="Red"></TextBlock>
+							<StackPanel x:Name="stKhachHang">
+								<StackPanel>
+									<WrapPanel Height="Auto">
+										<TextBlock FontWeight="Bold" MinWidth="300">
+									Tên khách hàng:
+									<Run FontStyle="Italic" Text="{Binding KhachHang.Ten}"/>
+										</TextBlock>
+										<TextBlock FontWeight="Bold" Margin="0 1">
+									Số điện thoại: 
+									<Run FontStyle="Italic" Text="{Binding KhachHang.SDT}"/>
+										</TextBlock>
+									</WrapPanel>
+
+									<TextBlock FontWeight="Bold" Margin="0 0 0 1">
+						Địa chỉ:
+						<Run FontStyle="Italic" Text="{Binding KhachHang.DiaChi}"/>
+									</TextBlock>
+								</StackPanel>
+								<Grid x:Name="grK80"
+									  TextElement.FontSize="8">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="20"/>
+										<ColumnDefinition Width="*"/>
+										<ColumnDefinition Width="0.25*"/>
+										<ColumnDefinition Width="0.4*"/>
+									</Grid.ColumnDefinitions>
+									<Grid.Resources>
+										<Style TargetType="Label">
+											<Setter Property="HorizontalContentAlignment" Value="Center"/>
+											<Setter Property="Padding" Value="0 3"/>
+											<Setter Property="VerticalContentAlignment" Value="Center"/>
+											<Setter Property="BorderBrush" Value="Black"/>
+										</Style>
+									</Grid.Resources>
+									<Label BorderThickness="1 1 0 1">
+										<Run FontWeight="Bold">STT</Run>
+									</Label>
+									<Label Grid.Column="1" 
+									   BorderThickness="1 1 0 1">
+										<Run FontWeight="Bold">Tên mặt hàng</Run>
+									</Label>
+									<Label Grid.Column="2"
+									   BorderThickness="1 1 0 1">
+										<Run FontWeight="Bold">C.Khấu</Run>
+									</Label>
+									<Label Grid.Column="3" 
+									   BorderThickness="1">
+										<Run FontWeight="Bold">Thành tiền</Run>
+									</Label>
+								</Grid>
+								<Grid x:Name="grA5" DockPanel.Dock="Top">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="30"/>
+										<ColumnDefinition/>
+										<ColumnDefinition Width="2*"/>
+										<ColumnDefinition Width="0.7*"/>
+										<ColumnDefinition Width="0.7*"/>
+									</Grid.ColumnDefinitions>
+									<Grid.Resources>
+										<Style TargetType="Label">
+											<Setter Property="HorizontalContentAlignment" Value="Center"/>
+											<Setter Property="Padding" Value="0 5"/>
+											<Setter Property="VerticalContentAlignment" Value="Center"/>
+											<Setter Property="BorderBrush" Value="Black"/>
+										</Style>
+									</Grid.Resources>
+									<Label BorderThickness="1 1 0 1">
+										<Run FontWeight="Bold">STT</Run>
+									</Label>
+									<Label Grid.Column="1" 
+									   BorderThickness="1 1 0 1">
+										<Run FontWeight="Bold">Tên mặt hàng</Run>
+									</Label>
+									<Label Grid.Column="2" 
+									   BorderThickness="1 1 0 1">
+										<Run FontWeight="Bold">Quy cách</Run>
+									</Label>
+									<Label Grid.Column="3"
+									   BorderThickness="1 1 0 1">
+										<Run FontWeight="Bold">Ch.Khấu</Run>
+									</Label>
+									<Label Grid.Column="4" 
+									   BorderThickness="1">
+										<Run FontWeight="Bold">Thành tiền</Run>
+									</Label>
+								</Grid>
+								<StackPanel x:Name="stMatHangs"/>
+								<TextBlock Visibility="Collapsed" FontStyle="Italic" x:Name="txbSoDoLapTheoYeuCau"/>
+								<TextBlock Text="{Binding QuaTang}"/>
+								<TextBlock Text="{Binding BaoHanh}"/>
+								<StackPanel>
+									<TextBlock Margin="0 0 0 5" HorizontalAlignment="Right"
+										x:Name="txbTongCong"
+										   FontWeight="Bold"/>
+									<TextBlock HorizontalAlignment="Right"
+											   Name="txbDatTruoc">
+									</TextBlock>
+								</StackPanel>
+							</StackPanel>
+						</StackPanel>
+					</DockPanel>
+				</Border>
+
+			</Border>
+		</ScrollViewer>
+		<StackPanel Orientation="Horizontal" 
+					VerticalAlignment="Top"
+					Margin="20 55 0 0">
+			<TextBlock FontSize="15">
+				Khổ in:</TextBlock>
+			<RadioButton Margin="20 0" IsChecked="True"
+						Checked="rbtnA5_Checked"
+					  FontSize="15">A5</RadioButton>
+			<RadioButton Checked="rbtnk57_Checked" FontSize="15">k57</RadioButton>
+			<RadioButton Checked="rbtnk80_Checked" Margin="20 0" FontSize="15">k80</RadioButton>
+		</StackPanel>
+		<Button BorderBrush="Transparent" 
+				HorizontalAlignment="Right"
+				VerticalAlignment="Top"
+				Padding="5 0"
+				Margin="13 3"
+					Background="Transparent" 
+						Style="{StaticResource MaterialDesignFlatSecondaryButton}"
+					Click="Button_Click" Grid.ColumnSpan="2">
+			<materialDesign:PackIcon Kind="Close" Width="20" Height="20"/>
+		</Button>
+		<Button HorizontalAlignment="Right" 
+				VerticalAlignment="Top"
+				Width="50"
+				materialDesign:ButtonAssist.CornerRadius="10"
+				Height="50" Padding="0"
+				ToolTip="In hóa đơn"
+				Style="{StaticResource MaterialDesignFlatDarkButton}"
+				Background="{DynamicResource MaterialDesignTextFieldBoxBackground}"
+				Margin="30 40" Click="Button_Click_1">
+			<materialDesign:PackIcon Kind="Printer" Width="24" Height="24"
+									 />
+		</Button>
+	</Grid>
+</Window>

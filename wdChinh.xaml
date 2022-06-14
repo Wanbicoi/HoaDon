@@ -1,0 +1,113 @@
+﻿<Window x:Class="HoaDon.wdChinh"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"		
+		FontSize="14"
+		Closing="Window_Closing"
+		AllowsTransparency="True"
+		Background="Transparent"
+		MouseLeftButtonDown="Window_MouseDown"
+        Title="EyePiece" Height="620" Width="950" 
+		WindowStartupLocation="CenterScreen" 
+		ResizeMode="NoResize" WindowStyle="None">
+	<Grid>
+		<Border Background="White"
+		CornerRadius="10"
+			Margin="3"
+		BorderThickness="0 0 2 2">
+			<Border.Effect>
+				<DropShadowEffect ShadowDepth="2"/>
+			</Border.Effect>
+		</Border>
+		<DockPanel>
+			<WrapPanel DockPanel.Dock="Top" Margin="5 0"
+					HorizontalAlignment="Right">
+				<TextBlock Margin="0 0 380 0"
+						   FontWeight="Bold"
+						   Foreground="{DynamicResource PrimaryHueMidBrush}"
+						   VerticalAlignment="Center">EyePiece</TextBlock>
+				<Button BorderBrush="Transparent"  				
+						Padding="7 0"
+						Margin="2 0"
+						Style="{StaticResource MaterialDesignFlatSecondaryButton}"
+					Background="Transparent" 
+					Click="Button_Click_1">
+					<materialDesign:PackIcon Kind="WindowMinimize"/>
+				</Button>
+				<Button BorderBrush="Transparent" 
+					Background="Transparent" 				
+						Padding="5 0"
+						Margin="0 3 0 3"	
+						materialDesign:ButtonAssist.CornerRadius="0 10 0 0"
+						Style="{StaticResource MaterialDesignFlatSecondaryButton}"
+					Click="Button_Click_2">
+					<materialDesign:PackIcon Kind="Close" Width="20" Height="20"/>
+				</Button>
+			</WrapPanel>
+			<StackPanel DockPanel.Dock="Left" Margin="10 0">
+				<Image x:Name="imgLogo"
+					   Width="100" Height="100" Margin="0 0 0 20"/>
+				<RadioButton IsChecked="True"
+							 PreviewMouseDown="btnTrangChu"
+					Style="{StaticResource MaterialDesignTabRadioButtonLeft}"
+					Margin="0 5">
+					<StackPanel Orientation="Horizontal">
+						<materialDesign:PackIcon Kind="Home" VerticalAlignment="Center"/>
+						<TextBlock>
+					Trang chủ</TextBlock>
+					</StackPanel></RadioButton>
+				<RadioButton PreviewMouseDown="btnHoaDon"
+					Style="{StaticResource MaterialDesignTabRadioButtonLeft}"
+					 Margin="0 5">
+					<StackPanel Orientation="Horizontal">
+						<materialDesign:PackIcon Kind="FileDocumentEdit" VerticalAlignment="Center"/>
+						<TextBlock>Hóa đơn</TextBlock>
+					</StackPanel></RadioButton>
+				<RadioButton PreviewMouseDown="btnKhoHang"
+					Style="{StaticResource MaterialDesignTabRadioButtonLeft}"
+					 Margin="0 5">
+					<StackPanel Orientation="Horizontal">
+						<materialDesign:PackIcon Kind="Store" VerticalAlignment="Center"/>
+						<TextBlock>
+					Kho hàng</TextBlock>
+					</StackPanel></RadioButton>
+				<RadioButton PreviewMouseDown="btnThongKe"
+					Style="{StaticResource MaterialDesignTabRadioButtonLeft}"
+					 Margin="0 5">
+					<StackPanel Orientation="Horizontal">
+						<materialDesign:PackIcon Kind="ReportBar" VerticalAlignment="Center"/>
+						<TextBlock>Thống kê</TextBlock>
+					</StackPanel></RadioButton>
+				<RadioButton PreviewMouseDown="btnDuLieuCu"
+					Style="{StaticResource MaterialDesignTabRadioButtonLeft}"
+					 Margin="0 100 0 0">
+					<StackPanel Orientation="Horizontal">
+						<materialDesign:PackIcon VerticalAlignment="Bottom"
+												 Kind="Pin"/>
+						<TextBlock>Dữ liệu cũ</TextBlock>
+					</StackPanel>
+				</RadioButton>
+				<RadioButton PreviewMouseDown="btnCaiDat"
+					Style="{StaticResource MaterialDesignTabRadioButtonLeft}">
+					<StackPanel Orientation="Horizontal">
+						<materialDesign:PackIcon Kind="Settings" VerticalAlignment="Center"/>
+						<TextBlock>Cài đặt</TextBlock>
+					</StackPanel></RadioButton>
+				<Button  Foreground="Black" 
+						 Click="btnHuongDan"
+						 Style="{StaticResource MaterialDesignFlatSecondaryButton}" Margin="0 5" >
+					<StackPanel Orientation="Horizontal">
+						<materialDesign:PackIcon Kind="Information" VerticalAlignment="Center"/>
+						<TextBlock>Hướng dẫn</TextBlock>
+					</StackPanel> </Button>
+
+			</StackPanel>
+			<Frame x:Name="nav" Padding="0 0 10 10" 
+				   Margin="0 0 10 10"
+				NavigationUIVisibility="Hidden"/>
+		</DockPanel>
+	</Grid>
+</Window>

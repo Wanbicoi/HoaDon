@@ -1,0 +1,363 @@
+﻿<Page x:Class="HoaDon.pgHoaDon"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+      mc:Ignorable="d" 
+	  xmlns:local ="clr-namespace:HoaDon.Helpers"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+	  FontSize="14"
+      d:DesignHeight="550" d:DesignWidth="800"
+      Title="pgHoaDon">
+	<Border CornerRadius="10" 
+			Background="{DynamicResource PrimaryHueMidBrush}"
+			Padding="10">
+		<Border.Resources>
+			<local:GiaTienConverter x:Key="GiaTienConverter" />
+			<Style TargetType="materialDesign:Card">
+				<Setter Property="UniformCornerRadius" Value="10"/>
+				<Setter Property="Padding" Value="10 0 10 10"/>
+				<Setter Property="Margin" Value="5"/>
+			</Style>
+			<Style TargetType="TextBlock">
+				<Setter Property="VerticalAlignment" Value="Center"/>
+			</Style>
+		</Border.Resources>
+		<DockPanel>
+			<TextBlock FontWeight="Bold" FontSize="30" 
+						DockPanel.Dock="Top"
+						HorizontalAlignment="Center" 
+						Foreground="White">HÓA ĐƠN</TextBlock>
+			<DockPanel DockPanel.Dock="Top">
+				<materialDesign:Card UniformCornerRadius="10" Width="350"
+						DockPanel.Dock="Left" >
+					<StackPanel>
+						<TextBlock HorizontalAlignment="Center"
+									FontSize="18"
+									Margin="0 0 0 5">Thông tin khách hàng</TextBlock>
+						<Grid>
+							<DockPanel>
+								<TextBox Name="txbSoDienThoai"
+										 TextChanged="txbSoDienThoai_TextChanged"
+										 
+										 Panel.ZIndex="1"
+											Text="{Binding KhachHang.SDT}" Width="85" DockPanel.Dock="Right"
+											materialDesign:HintAssist.Hint="Số điện thoại"/>
+								<materialDesign:PackIcon Kind="Phone" Margin="10 5 0 5" DockPanel.Dock="Right"/>
+								<materialDesign:PackIcon Kind="Account" Margin="0 5"/>
+								<TextBox Name="txbTenKhachHang" 
+										 PreviewTextInput="txbTenKhachHang_PreviewTextInput"
+								   Panel.ZIndex="0" 
+										 TextChanged="txbTenKhachHang_TextChanged"
+											Text="{Binding KhachHang.Ten}"
+									materialDesign:HintAssist.Hint="Tên khách hàng"/>
+							</DockPanel>
+							<Popup StaysOpen="False"
+							   Placement="Bottom"
+							   Name="pupGoiYTenKhachHang"
+								   AllowsTransparency="True"
+								   PlacementTarget="{Binding ElementName=txbTenKhachHang}">
+								<materialDesign:Card >
+									<ListBox x:Name="lbGoiYTenKhachHang" 
+										 MaxHeight="150"
+										 SelectionChanged="lbGoiYTenKhachHang_SelectionChanged"
+										 Background="White">
+										<ListBox.ItemTemplate>
+											<DataTemplate>
+												<StackPanel Orientation="Horizontal">
+													<TextBlock Text="{Binding Ten}"/>
+												</StackPanel>
+											</DataTemplate>
+										</ListBox.ItemTemplate>
+									</ListBox>
+								</materialDesign:Card>
+							</Popup>
+							<Popup StaysOpen="False" 
+								   AllowsTransparency="True"
+							   Placement="Bottom"
+							PlacementTarget="{Binding ElementName=txbSoDienThoai}"
+								Name="pupGoiYSDT">
+								<materialDesign:Card >
+									<ListBox x:Name="lbGoiYSDT" 
+										 MaxHeight="150"
+										 SelectionChanged="lbGoiYSDT_SelectionChanged"
+										 Background="White">
+										<ListBox.ItemTemplate>
+											<DataTemplate>
+												<StackPanel Orientation="Horizontal">
+													<TextBlock Text="{Binding SDT}"/>
+												</StackPanel>
+											</DataTemplate>
+										</ListBox.ItemTemplate>
+									</ListBox>
+								</materialDesign:Card>
+							</Popup>
+						</Grid>
+						<DockPanel>
+							<TextBlock>Địa chỉ:</TextBlock>
+							<ComboBox Name="cbDiaChiKhachHang" Text="{Binding KhachHang.DiaChi}"
+										IsEditable="True"/>
+						</DockPanel>
+						<DockPanel>
+							<TextBlock>Bảo hành:</TextBlock>
+							<ComboBox Name="cbBaoHanh" Text="{Binding BaoHanh}" IsEditable="True"/>
+						</DockPanel>
+						<DockPanel>
+							<TextBlock>Quà tặng:</TextBlock>
+							<ComboBox Name="cbQuaTang" Text="{Binding QuaTang}"
+									  IsEditable="True"/>
+						</DockPanel>
+						<StackPanel Orientation="Horizontal">
+							<TextBlock Margin="0 0 10 0">Ngày mua hàng: </TextBlock>
+							<DatePicker Name="dtpNgay" SelectedDateFormat="Short" MinWidth="120" MaxWidth="200"/>
+							<Button  Margin="6 1 0  0" Click="Click_btnHomNay" Style="{StaticResource MaterialDesignOutlinedDarkButton}"
+									  >Hôm nay</Button>
+						</StackPanel>
+						<DockPanel>
+							<CheckBox IsChecked="{Binding SoDoLapTheoYeuCau}"
+									  Margin="0 0 10 0">Số độ lắp theo yêu cầu</CheckBox>
+							<CheckBox Name="cbDatTruoc" IsChecked="{Binding DatTruoc}">
+								<StackPanel Orientation="Horizontal" >
+									<TextBlock Margin="0 0 4 0">Đặt trước</TextBlock>
+									<Border>
+										<Border.Style>
+											<Style TargetType="Border">
+												<Setter Property="Visibility" Value="Hidden" />
+												<Style.Triggers>
+													<DataTrigger Binding="{Binding ElementName=cbDatTruoc, Path=IsChecked}" Value="True">
+														<Setter Property="Visibility" Value="Visible" />
+													</DataTrigger>
+												</Style.Triggers>
+											</Style>
+										</Border.Style>
+										<TextBox MaxLength="6"
+											materialDesign:TextFieldAssist.CharacterCounterVisibility="Collapsed" Text="{Binding TienDatTruoc}"
+									 PreviewTextInput="txbGiaTien_PreviewTextInput"
+											materialDesign:HintAssist.Hint="Giá tiền">
+										</TextBox>
+									</Border>
+								</StackPanel>
+							</CheckBox>
+						</DockPanel>
+					</StackPanel>
+				</materialDesign:Card>
+
+				<materialDesign:Card>
+					<StackPanel x:Name="stMatHang">
+						<TextBlock HorizontalAlignment="Center"
+									FontSize="18">Thông tin mặt hàng</TextBlock>
+						<DockPanel>
+							<ComboBox Name="cbTenMatHang" Text="{Binding TenMatHang}" materialDesign:HintAssist.Hint="Tên mặt hàng" IsEditable="True"/>
+							<ComboBox Name="cbQuyCach"
+										Text="{Binding QuyCach}" 
+									  DropDownClosed="cbQuyCach_DropDownClosed"
+										Margin="10 0 0 0" IsEditable="True"
+										materialDesign:HintAssist.Hint="Quy cách"/>
+						</DockPanel>
+						<StackPanel Orientation="Horizontal" Margin="0 5">
+							<TextBox MaxLength="6" x:Name="txbGiaTien"
+									materialDesign:TextFieldAssist.CharacterCounterVisibility="Collapsed"
+									 PreviewTextInput="txbGiaTien_PreviewTextInput"
+									 Text="{Binding GiaTien}" VerticalContentAlignment="Center"
+										Margin="0 0 5 0" Width="150"
+										materialDesign:HintAssist.Hint="Giá tiền"/>
+							<TextBlock >Triết khấu:</TextBlock>
+							<TextBox MaxLength="6"
+								materialDesign:TextFieldAssist.CharacterCounterVisibility="Collapsed"
+									 Text="{Binding TrietKhau}"
+										materialDesign:HintAssist.Hint="$ hoặc %" Width="60"/>
+						</StackPanel>
+						<DockPanel>
+							<Button VerticalAlignment="Bottom"    
+									Panel.ZIndex="10"
+									materialDesign:ButtonAssist.CornerRadius="10"
+									DockPanel.Dock="Right" Margin="10 0"
+									Foreground="White" 
+									Click="Click_btnThem">Thêm</Button>
+							<StackPanel Name="stThongSoTrongKinh">
+								<CheckBox x:Name="cbThongSoTrongKinh"
+											IsChecked="{Binding ThongSoTrongKinh}">Số độ 2 bên tròng</CheckBox>
+								<StackPanel>
+									<StackPanel.Style>
+										<Style TargetType="StackPanel">
+											<Setter Property="Visibility" Value="Hidden" />
+											<Style.Triggers>
+												<DataTrigger Binding="{Binding ElementName=cbThongSoTrongKinh, Path=IsChecked}" Value="True">
+													<Setter Property="Visibility" Value="Visible" />
+												</DataTrigger>
+											</Style.Triggers>
+										</Style>
+									</StackPanel.Style>
+									<StackPanel Orientation="Horizontal">
+										<TextBlock>Tròng phải:</TextBlock>
+										<TextBox Width="100" Text="{Binding MatPhai}"/>
+									</StackPanel>
+									<StackPanel Orientation="Horizontal">
+										<TextBlock>Tròng trái:</TextBlock>
+										<TextBox Margin="6 0 0 0" Text="{Binding MatTrai}" Width="100"/>
+									</StackPanel>
+								</StackPanel>
+							</StackPanel>
+						</DockPanel>
+					</StackPanel>
+				</materialDesign:Card>
+			</DockPanel>
+			<StackPanel DockPanel.Dock="Right" 
+						VerticalAlignment="Top">
+
+				<materialDesign:Card MinWidth="250"
+									 VerticalAlignment="Stretch">
+					<StackPanel>
+						<TextBlock HorizontalAlignment="Center"
+										Margin="0 0 0 5"
+									FontSize="18">Bảng thông số thị lực</TextBlock>
+						<StackPanel>
+							<CheckBox Name="cbHienThi" IsChecked="{Binding HienThiThiLuc}">Hiển thị trên hóa đơn</CheckBox>
+							<Grid Height="100" >
+								<Grid.Resources>
+									<Style TargetType="TextBlock">
+										<Setter Property="HorizontalAlignment" Value="Center"/>
+										<Setter Property="VerticalAlignment" Value="Center"/>
+									</Style>
+									<Style TargetType="TextBox">
+										<Setter Property="VerticalContentAlignment" Value="Center"/>
+										<Setter Property="TextAlignment" Value="Center"/>
+									</Style>
+								</Grid.Resources>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="15"/>
+									<ColumnDefinition/>
+									<ColumnDefinition/>
+									<ColumnDefinition/>
+									<ColumnDefinition/>
+									<ColumnDefinition/>
+								</Grid.ColumnDefinitions>
+								<Grid.RowDefinitions>
+									<RowDefinition/>
+									<RowDefinition/>
+									<RowDefinition/>
+								</Grid.RowDefinitions>
+								<TextBlock Grid.Row="0" Grid.Column="5">PD</TextBlock>
+								<TextBlock Grid.Row="0" Grid.Column="1">SHP</TextBlock>
+								<TextBlock Grid.Row="0" Grid.Column="2">CYL</TextBlock>
+								<TextBlock Grid.Row="0" Grid.Column="3">AX</TextBlock>
+								<TextBlock Grid.Row="0" Grid.Column="4">ADD</TextBlock>
+								<TextBlock Grid.Row="1" Grid.Column="0">R</TextBlock>
+								<TextBlock Grid.Row="2" Grid.Column="0">L</TextBlock>
+								<TextBox Grid.Row="1" Grid.Column="1" Text="{Binding ThiLuc[0]}"/>
+								<TextBox Grid.Row="1" Grid.Column="2" Text="{Binding ThiLuc[1]}"/>
+								<TextBox Grid.Row="1" Grid.Column="3" Text="{Binding ThiLuc[2]}"/>
+								<TextBox Grid.Row="1" Grid.Column="4" Text="{Binding ThiLuc[3]}"/>
+								<TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ThiLuc[4]}"/>
+								<TextBox Grid.Row="2" Grid.Column="2" Text="{Binding ThiLuc[5]}"/>
+								<TextBox Grid.Row="2" Grid.Column="3" Text="{Binding ThiLuc[6]}"/>
+								<TextBox Grid.Row="2" Grid.Column="4" Text="{Binding ThiLuc[7]}"/>
+								<TextBox Grid.RowSpan="2" Grid.Row="1" Grid.Column="5"
+										Text="{Binding ThiLuc[8]}"/>
+							</Grid>
+						</StackPanel>
+					</StackPanel>
+				</materialDesign:Card>				
+				<Button 
+						Style="{StaticResource MaterialDesignOutlinedDarkButton}"
+						materialDesign:ButtonAssist.CornerRadius="10"
+						Background="White" Margin="10 2"
+						HorizontalAlignment="Right"
+						Width="135"
+						Click="Click_btnLamMoi">
+					Làm mới
+				</Button>
+				<Button 
+						Style="{StaticResource MaterialDesignOutlinedDarkButton}"
+						materialDesign:ButtonAssist.CornerRadius="10"
+						Background="White" Margin="0 5 10 0"
+						HorizontalAlignment="Right"
+						Width="135"
+						Click="Click_btnInHoaDon">
+					Xem hóa đơn
+				</Button>
+				<Button
+						Foreground="LimeGreen"
+					BorderBrush="LimeGreen"
+						Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
+						materialDesign:ButtonAssist.CornerRadius="10"
+						Background="White" Margin="0 5 10 0"
+						
+						HorizontalAlignment="Right"
+						Width="135"						
+						Click="Click_btnLuuKhachHang">
+					Lưu khách hàng
+				</Button>
+			</StackPanel>
+			<materialDesign:Card Padding="10">
+				<Grid>
+					<ScrollViewer HorizontalScrollBarVisibility="Auto">
+						<DockPanel>
+							<Grid DockPanel.Dock="Top">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition/>
+									<ColumnDefinition Width="2*"/>
+									<ColumnDefinition Width="0.7*"/>
+									<ColumnDefinition Width="0.7*"/>
+								</Grid.ColumnDefinitions>
+								<Grid.Resources>
+									<Style TargetType="Label">
+										<Setter Property="HorizontalContentAlignment" Value="Center"/>
+										<Setter Property="VerticalAlignment" Value="Center"/>
+										<Setter Property="BorderBrush" Value="Black"/>
+										<Setter Property="BorderThickness" Value="1 1 0 1"/>
+									</Style>
+								</Grid.Resources>
+								<Label>Tên mặt hàng</Label>
+								<Label Grid.Column="1" >Quy cách</Label>
+								<Label Grid.Column="2">Tr.Khấu</Label>
+								<Label Grid.Column="3" 
+									BorderThickness="1">Thành tiền</Label>
+							</Grid>
+							<ListBox Name="lbMatHangs" 
+									 ItemsSource="{Binding MatHangs}"
+										HorizontalContentAlignment="Stretch">
+								<ListBox.ItemContainerStyle>
+									<Style TargetType="ListBoxItem">
+										<Setter Property="Padding" Value="0"/>
+										<Setter Property="Margin" Value="0"/>
+									</Style>
+								</ListBox.ItemContainerStyle>
+								<ListBox.ItemTemplate>
+									<DataTemplate>
+										<Grid>
+											<Grid.ColumnDefinitions>
+												<ColumnDefinition Width="*"/>
+												<ColumnDefinition Width="2*"/>
+												<ColumnDefinition Width="0.7*"/>
+												<ColumnDefinition Width="0.7*"/>
+											</Grid.ColumnDefinitions>
+											<Grid.Resources>
+												<Style TargetType="Label">
+													<Setter Property="HorizontalContentAlignment" Value="Center"/>
+													<Setter Property="VerticalAlignment" Value="Stretch"/>
+													<Setter Property="BorderBrush" Value="Black"/>
+													<Setter Property="BorderThickness" Value="1 1 0 1"/>
+												</Style>
+											</Grid.Resources>
+											<Label Content="{Binding TenMatHang}"/>
+											<Label Grid.Column="1" Content="{Binding QuyCach}" HorizontalContentAlignment="Left"/>
+											<Label Grid.Column="2" Content="{Binding TrietKhau}"/>
+											<Label Grid.Column="3" Content="{Binding GiaTien, Converter={StaticResource GiaTienConverter}}"
+												BorderThickness="1"/>
+										</Grid>
+									</DataTemplate>
+								</ListBox.ItemTemplate>
+							</ListBox>
+						</DockPanel>
+					</ScrollViewer>
+					<Button HorizontalAlignment="Right" 
+							Foreground="White"
+							Margin="0,219,23,0"
+							VerticalAlignment="Top" 
+							materialDesign:ButtonAssist.CornerRadius="10" Click="Click_btnXoa">Xóa</Button>
+				</Grid>
+			</materialDesign:Card>
+		</DockPanel>
+	</Border>
+</Page>
